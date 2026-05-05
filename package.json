@@ -1,0 +1,41 @@
+{
+  "name": "@leadertechie/geo-hierarchy-un-m49",
+  "version": "0.0.0",
+  "description": "UN M49 geographic hierarchy provider. Maps ISO Alpha-2/3 codes to regional hierarchy (continent → sub-region → country).",
+  "type": "module",
+  "main": "dist/geo-hierarchy-un-m49.js",
+  "module": "dist/geo-hierarchy-un-m49.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "dev": "vite build --watch",
+    "build": "vite build",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "keywords": [
+    "un-m49",
+    "geography",
+    "hierarchy",
+    "iso",
+    "alpha-2",
+    "alpha-3",
+    "region",
+    "country",
+    "m49"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "vite": "^5.4.0",
+    "vitest": "^1.6.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leadertechie/geo-hierarchy-un-m49.git"
+  }
+}
