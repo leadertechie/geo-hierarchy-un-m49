@@ -1,3 +1,6 @@
+import type { LoggerInterface } from "@leadertechie/telemetry";
+import getDefaultLogger from "./telemetry-init";
+
 /**
  * @leadertechie/geo-hierarchy-un-m49
  *
@@ -44,7 +47,9 @@ const REGION_TO_COUNTRIES = buildReverseMap();
  * Get the parent key for a given geographic code.
  * Supports ISO Alpha-2, Alpha-3, and UN M49 region names.
  */
-export function getParent(key: string): string | undefined {
+export function getParent(key: string, logger?: LoggerInterface): string | undefined {
+  const log = logger ?? getDefaultLogger("geo-hierarchy-un-m49");
+  if (!M49_MAP[key]) log.warn("Unknown region code", { key });
   return M49_MAP[key];
 }
 
